@@ -24,12 +24,8 @@ int main(int argc, char** argv) {
 		code.push_back(file.get());
 	}
 
-	try {
-		parser = new Parser(code.c_str());
-		parser->run();
-	} catch (string error) {
-		cout << endl << "[*] " << error << endl;
-	}
+	parser = new Parser(code.c_str());
+	parser->run();
 
 	delete parser;
 

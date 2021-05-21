@@ -35,10 +35,6 @@ Parser::Parser(const char program[]) {
 void Parser::run() {
 	while (*instruction) {
 		switch (*instruction) {
-			case '\n':
-				break; // Do nothing
-			case EOF:
-				break; // Do nothing
 			case '>':
 				this->toRight();
 				break;
@@ -63,8 +59,6 @@ void Parser::run() {
 			case ']':
 				this->endLoop();
 				break;
-			default:
-				throw string("Unrecognised character: ") + *instruction;
 		}
 
 		this->instruction++;
@@ -118,7 +112,7 @@ void Parser::startLoop() {
 /* Return to the matching '[' */
 void Parser::endLoop() {
 	int counter = 0;
-	
+
 	do {
 		if (*this->instruction == '[') counter++;
 		else if (*this->instruction == ']') counter--;
