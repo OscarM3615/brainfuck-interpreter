@@ -9,7 +9,7 @@ using namespace std;
 
 class Parser {
 	private:
-		unsigned char memory[255] = {0};
+		unsigned char memory[256] = {0};
 		unsigned char cursor;
 		const char* instruction;
 	public:
