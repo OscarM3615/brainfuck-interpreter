@@ -1,0 +1,14 @@
+{
+  "name": "brainfuck",
+  "description": "Brainfuck Interpreter",
+  "authors": [
+    "Óscar Miranda"
+  ],
+  "version": "1",
+  "compiler": "g++",
+  "main": "main.cpp",
+  "outputDir": "./dist",
+  "include": [
+    "src"
+  ]
+}
